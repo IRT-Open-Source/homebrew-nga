@@ -28,7 +28,7 @@ class Libbw64 < Formula
 
         std::vector<float> buffer(512, 0.f);
         bw64File->write(&buffer.front(), buffer.size());
-        
+
         return 0;
       }
     EOS
