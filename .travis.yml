@@ -17,6 +17,6 @@ script:
   - |
     if [[ "${VERSION}" == "latest" ]]; then
       brew audit --strict --online ./${LIBRARY}.rb
-      brew install -v ./${LIBRARY}.rb
+      brew install ./${LIBRARY}.rb
       brew test ./${LIBRARY}.rb
     fi
