@@ -2,8 +2,8 @@ class Libadm < Formula
   desc "Audio Definition Model (ITU-R BS.2076) library"
   homepage "https://libadm.readthedocs.io/en/latest/"
 
-  url "https://github.com/IRT-Open-Source/libadm/archive/0.9.0.tar.gz"
-  sha256 "6e86f6e9ba82753f1ecf2d2b632a284044cd383718e82062b6a850bea05e0f3f"
+  url "https://github.com/IRT-Open-Source/libadm/archive/0.10.0.tar.gz"
+  sha256 "99d48e829d7e5283758add1e27c67681a4691eea2b0891b95e7702743d1b249a"
 
   head "https://github.com/IRT-Open-Source/libadm.git"
 
@@ -13,7 +13,7 @@ class Libadm < Formula
   def install
     ENV.cxx11
     args = std_cmake_args
-    args << "-DBUILD_SHARED_LIBS=OFF" # TODO: change to ON once fix is released
+    args << "-DBUILD_SHARED_LIBS=ON" 
     system "cmake", ".", *args
     system "make"
     system "make", "test"
