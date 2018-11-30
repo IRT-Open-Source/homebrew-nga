@@ -14,7 +14,7 @@ class Libadm < Formula
   def install
     ENV.cxx11
     args = std_cmake_args
-    args << "-DBUILD_SHARED_LIBS=ON"
+    args << "-DBUILD_SHARED_LIBS=OFF" # TODO: change to ON once fix is released
     system "cmake", ".", *args
     system "make"
     system "make test"
