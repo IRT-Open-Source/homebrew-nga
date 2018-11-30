@@ -1,0 +1,22 @@
+os: osx
+sudo: false
+
+osx_image:
+  - xcode7.3
+  - xcode8.3
+  - xcode9.4
+
+env:
+  - LIBRARY=libadm VERSION=latest
+  - LIBRARY=libbw64 VERSION=latest
+
+before_install:
+  - brew update >/dev/null
+
+script:
+  - |
+    if [[ "${VERSION}" == "latest" ]]; then
+      brew audit --strict --online ./${LIBRARY}.rb
+      brew install -v ./${LIBRARY}.rb
+      brew test ./${LIBRARY}.rb
+    fi
