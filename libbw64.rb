@@ -2,8 +2,8 @@ class Libbw64 < Formula
   desc "Broadcast Wave 64 (ITU-R BS.2088) library"
   homepage "https://libbw64.readthedocs.io/en/latest/"
 
-  url "https://github.com/IRT-Open-Source/libbw64/archive/0.9.0.tar.gz"
-  sha256 "fbe16fbf25f2287e232ddc6e9bec6114654e19c63f4798f88a43c1de5642ae03"
+  url "https://github.com/IRT-Open-Source/libbw64/archive/0.10.0.tar.gz"
+  sha256 "4ae6e02868f98cfeadb50c4f246527a4d2d6013ee483790a04bb997591416d21"
 
   head "https://github.com/IRT-Open-Source/libbw64.git"
 
