@@ -2,10 +2,8 @@ class Libadm < Formula
   desc "Audio Definition Model (ITU-R BS.2076) library"
   homepage "https://libadm.readthedocs.io/en/latest/"
 
-  url "https://github.com/IRT-Open-Source/libadm/archive/0.11.0.tar.gz"
-  sha256 "95a34b531ce93391623f2ff652936f8d136c176e94b0680909dab5e99555b2e7"
-
-  head "https://github.com/IRT-Open-Source/libadm.git"
+  url "https://github.com/IRT-Open-Source/libadm/archive/0.10.0.tar.gz"
+  sha256 "99d48e829d7e5283758add1e27c67681a4691eea2b0891b95e7702743d1b249a"
 
   depends_on "cmake" => :build
   depends_on "boost"
@@ -13,7 +11,7 @@ class Libadm < Formula
   def install
     ENV.cxx11
     args = std_cmake_args
-    args << "-DBUILD_SHARED_LIBS=ON"
+    args << "-DBUILD_SHARED_LIBS=ON" 
     system "cmake", ".", *args
     system "make"
     system "make", "test"
@@ -33,7 +31,7 @@ class Libadm < Formula
         return 0;
       }
     EOS
-    system ENV.cxx, "-std=c++11", "-fvisibility=hidden", "-L#{lib}", "-ladm", "test.cpp", "-o", "test"
+    system ENV.cxx, "-std=c++11", "-fvisibility=hidden", "-L#{lib}", "-llibadm", "test.cpp", "-o", "test"
     system "./test"
   end
 end
