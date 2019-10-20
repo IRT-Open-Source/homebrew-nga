@@ -2,10 +2,10 @@ os: osx
 sudo: false
 
 osx_image:
-  - xcode8.3
   - xcode9.4
-  - xcode10.1
-
+  - xcode10.3
+  - xcode11.2
+  
 env:
   - LIBRARY=libadm VERSION=latest
   - LIBRARY=libbw64 VERSION=latest
