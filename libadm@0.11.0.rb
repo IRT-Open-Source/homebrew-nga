@@ -2,10 +2,8 @@ class Libadm < Formula
   desc "Audio Definition Model (ITU-R BS.2076) library"
   homepage "https://libadm.readthedocs.io/en/latest/"
 
-  url "https://github.com/IRT-Open-Source/libadm/archive/0.12.0.tar.gz"
-  sha256 "0242b86158ffa1d79b734455faeff7133bfe1bb25303cf6a3893a97dbddb0dc7"
-
-  head "https://github.com/IRT-Open-Source/libadm.git"
+  url "https://github.com/IRT-Open-Source/libadm/archive/0.11.0.tar.gz"
+  sha256 "95a34b531ce93391623f2ff652936f8d136c176e94b0680909dab5e99555b2e7"
 
   depends_on "cmake" => :build
   depends_on "boost"
