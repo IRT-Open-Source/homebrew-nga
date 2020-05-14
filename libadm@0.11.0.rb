@@ -1,4 +1,4 @@
-class Libadm < Formula
+class LibadmAT0110 < Formula
   desc "Audio Definition Model (ITU-R BS.2076) library"
   homepage "https://libadm.readthedocs.io/en/latest/"
 

@@ -1,4 +1,4 @@
-class Libadm < Formula
+class LibadmAT0100 < Formula
   desc "Audio Definition Model (ITU-R BS.2076) library"
   homepage "https://libadm.readthedocs.io/en/latest/"
 
@@ -11,7 +11,7 @@ class Libadm < Formula
   def install
     ENV.cxx11
     args = std_cmake_args
-    args << "-DBUILD_SHARED_LIBS=ON" 
+    args << "-DBUILD_SHARED_LIBS=ON"
     system "cmake", ".", *args
     system "make"
     system "make", "test"
