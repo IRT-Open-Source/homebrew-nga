@@ -5,6 +5,8 @@ class LibadmAT0110 < Formula
   url "https://github.com/IRT-Open-Source/libadm/archive/0.11.0.tar.gz"
   sha256 "95a34b531ce93391623f2ff652936f8d136c176e94b0680909dab5e99555b2e7"
 
+  keg_only :versioned_formula
+
   depends_on "cmake" => :build
   depends_on "boost"
 
